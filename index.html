@@ -3,422 +3,1329 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hawk Agri 10</title>
-  <link rel="stylesheet" href="products.css" />
-   
+  <title>HawkAerosystem - Agricultural Precision Drone Systems</title>
+  <meta name="description" content="Agri-Hawk drone solutions for precision agriculture. High-efficiency drones for crop spraying, field monitoring, and agricultural automation in India.">
+  <meta name="keywords" content="agricultural drones, precision agriculture, crop spraying, farm automation, agriculture technology">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Agri-Hawk - Agricultural Precision Drone Systems">
+  <meta property="og:description" content="Professional agricultural drones for precision farming and crop management.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.hawkaerosystem.co.uk/">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Agri-Hawk - Agricultural Precision Drone Systems">
+  <meta name="twitter:description" content="Professional agricultural drones for precision farming and crop management.">
+
+  <!-- Favicon -->
+ <link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="businessGrowth.css" />
+  <link rel="stylesheet" href="product.css">
+  <link rel="stylesheet" href="apps.css">
+  <link rel="stylesheet" href="technology.css">
+  <link rel="stylesheet" href="./footer/footer.css">
+  <link rel="stylesheet" href="mobile-fixes.css">
+  <link rel="stylesheet" href="./header/header.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+//     function navigateTo(path) {
+//   window.location.href = path;
+// }
+
+  </script>
+
+
+<!-- header style css-->
+  <style>
+    /* Modal Styles */
+/* ===========================
+   MODAL OVERLAY
+=========================== */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;                     /* full-screen fix */
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  z-index: 99999;              /* above hamburger menu */
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;               /* prevents cutoff on small screens */
+}
+
+.modal-content {
+  position: relative;   /* ensures X stays on top */
+}
+/* ===========================
+   MODAL CONTAINER
+=========================== */
+.modal-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 14px;
+  width: 95%;
+  max-width: 500px;
+
+  max-height: 90vh;
+  overflow-y: auto;
+
+  box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+  animation: fadeModal 0.25s ease-out;
+}
+
+/* Modal Entry Animation */
+@keyframes fadeModal {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* ===========================
+   CLOSE BUTTON
+=========================== */
+.close-modal {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  font-size: 26px;
+  cursor: pointer;
+
+  color: #333;           /* visible on white */
+  background: #fff;      /* add small background */
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 999999;       /* ALWAYS on top */
+}
+
+.close-modal:hover {
+  background: #f1f1f1;
+}
+
+
+.close-modal:hover {
+  color: #000;
+}
+
+/* ===========================
+   HEADINGS
+=========================== */
+.modal h2 {
+  margin: 0 0 10px;
+  color: #222;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.modal-subtitle {
+  color: #555;
+  margin-bottom: 22px;
+  font-size: 15px;
+}
+
+/* ===========================
+   FORM FIELDS
+=========================== */
+.form-group {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.form-group input,
+.form-group select,
+textarea {
+  color: #111;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  width: 100%;
+  transition: 0.25s;
+}
+
+textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.2);
+  outline: none;
+}
+
+/* ===========================
+   SUBMIT BUTTON
+=========================== */
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/* ===========================
+   FOOTNOTE
+=========================== */
+.form-note {
+  text-align: center;
+  color: #666;
+  font-size: 13px;
+  margin-top: 15px;
+}
+
+.form-note a {
+  color: #2563eb;
+  font-weight: 500;
+}
+
+/* ===========================
+   RESPONSIVE FIXES
+=========================== */
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 22px;
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .form-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    padding: 18px;
+    border-radius: 10px;
+  }
+
+  .modal h2 {
+    font-size: 20px;
+  }
+
+  .submit-btn {
+    font-size: 15px;
+    padding: 12px;
+  }
+}
+
+.profile-icon {
+  width: 36px; height: 36px;
+  background: #333;
+  color: #fff;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.profile-dropdown {
+  position: absolute;
+  right: 0;
+  top: 46px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  width: 180px;
+  display: none;
+  z-index: 99999;
+}
+
+.profile-dropdown a {
+  display: block;
+  padding: 12px;
+  font-size: 14px;
+  color: #000;
+  text-decoration: none;
+}
+.profile-dropdown a:hover {
+  background: #f4f4f4;
+}
+
+.header-auth-box {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: auto !important;
+    height: auto !important;
+    min-width: 40px;
+}
+header.header {
+    position: relative;
+    z-index: 99999 !important;
+}
+.hero-section,
+.overlay {
+    position: relative;
+    z-index: 1 !important;
+}
+.header-auth-box {
+    
+    min-width: 127px;
+}
+  </style>
+
+
+
+  <!-- Schema: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Agri-Hawk Aero Systems",
+    "url": "https://www.hawkaerosystem.co.uk",
+    "logo": "https://www.hawkaerosystem.co.uk/pics/header.webp",
+    "description": "Professional agricultural drone systems for precision farming and crop management",
+    "sameAs": [
+      "https://www.facebook.com/agri-hawk",
+      "https://www.instagram.com/agri-hawk",
+      "https://www.linkedin.com/company/agri-hawk"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Support",
+      "email": "contact@hawkaerosystem.co.uk",
+      "availableLanguage": "en"
+    }
+  }
+  </script>
+
+  <!-- Schema: Product -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "Agri-Hawk Drone System",
+  "image": "https://www.hawkaerosystem.co.uk/pics/drone4.webp",
+  "description": "Advanced agricultural drone systems for precision spraying and field monitoring.",
+  "sku": "AGRI-HAWK-001",
+  "brand": {
+    "@type": "Brand",
+    "name": "HawkAerosystem"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "28"
+  },
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "GBP",
+    "lowPrice": "0",
+    "highPrice": "0",
+    "offerCount": "1",
+    "availability": "https://schema.org/InStock",
+    "url": "https://www.hawkaerosystem.co.uk/products/"
+  }
+}
+</script>
+
+
+  <!-- Schema: WebSite (enables sitelinks) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Hawk AeroSystems",
+    "url": "https://www.hawkaerosystem.co.uk/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.hawkaerosystem.co.uk/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- Schema: Navigation (helps Google show sitelinks) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "SiteNavigationElement",
+        "position": 1,
+        "name": "Products",
+        "url": "https://www.hawkaerosystem.co.uk/products"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 2,
+        "name": "Career",
+        "url": "https://www.hawkaerosystem.co.uk/career"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 3,
+        "name": "Distributor",
+        "url": "https://www.hawkaerosystem.co.uk/distributor"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 4,
+        "name": "Contact",
+        "url": "https://www.hawkaerosystem.co.uk/contact"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 5,
+        "name": "About",
+        "url": "https://www.hawkaerosystem.co.uk/about"
+      }
+    ]
+  }
+  </script>
+
+
+
+  <!-- this header in line  -->
+    <!-- Top black bar -->
+  <div class="top-bar">
+    <img src="./header/headerimages/header.webp" alt="NEO by EULER" class="bar-logo" />
+  </div>
+
+  <div class="nav-wrapper">
+    <div class="brand" onclick="navigateTo('/')">
+      <img src="header/headerimages/4.webp" alt="Hawk Aero Logo" class="brand-logo" />
+    </div>
+      <nav class="nav">
+        <div class="menu-item" data-menu="product">
+          <button>Product &#9662;</button>
+
+          <div class="dropdown wide">
+            <a class="dropdown-card" onclick="navigateTo('/products/p1')">
+              <img src="pics/drone4.webp" alt="Drone 10" />
+              <span>Agri-Hawk Drone 10</span>
+            </a>
+
+            <a class="dropdown-card" onclick="navigateTo('/products/p2')">
+              <img src="pics/drone1.avif" alt="Drone 30" />
+              <span>Agri-Hawk Drone 30</span>
+            </a>
+
+            <a class="dropdown-card" onclick="navigateTo('/products/p3')">
+              <img src="pics/drone2.webp" alt="Drone 80" />
+              <span>Agri-Hawk Drone 50</span>
+            </a>
+
+            <a class="dropdown-card" onclick="navigateTo('/products/p4')">
+              <img src="pics/drone3.webp" alt="Drone 100" />
+              <span>Agri-Hawk Drone 100</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- <div class="menu-item">
+          <a href="aboutus/aboutus.html">About Us</a>
+        </div> -->
+
+        <div class="menu-item">
+          <a href="/distributor">Become a Distributor</a>
+        </div>
+
+        <div class="menu-item">
+          <a href="/career">Career</a>
+        </div>
+      </nav>
+
+
+
+ <div class="actions">
+
+    <!-- Login/Register placeholder with fallback -->
+    <div id="headerAuthBox" class="header-auth-box">
+        <button class="demo-btn" onclick="navigateTo('/auth/login.php')">
+            Login / Register
+        </button>
+    </div>
+
+    <button id="demoBtn" class="demo-btn">
+        <span>Get Demo</span> <span class="arrow">→</span>
+    </button>
+
+    <select id="language">
+        <option>EN [English]</option>
+        <option>HI [Hindi]</option>
+        <option>KA [Kannada]</option>
+        <option>TE [Telugu]</option>
+        <option>TA [Tamil]</option>
+    </select>
+
+    <button id="mobileToggle" class="menu-toggle">☰</button>
+
+</div>
+
+
+
+
+    </div>
+  </div>
+<script src="/header/login-global.js"></script>
 </head>
+
 <body>
-
-<!-- HERO SECTION -->
-<section class="frame-12024">
-  <h1 class="frame-title">Agri-Hawk Drone 10</h1>
-  <p class="frame-text">
-    A powerful 10L agricultural drone built for precision spraying.
-  </p>
-  <button class="primary-btn">Get Demo ↗</button>
-</section>
-
-<!-- DRONE OVERVIEW SECTION -->
-<section class="frame-12060">
-  <div class="frame-12060-grid"></div>
-  <h2 class="frame-12060-title">Drone Overview</h2>
-  <p class="drone-overview-subtext">
-    The Agri-Hawk Drone 10 offers modular upgradability — from obstacle avoidance
-    radars to RTK precision and advanced night navigation systems. Built for
-    performance and adaptability in diverse agricultural environments.
-  </p>
-  <img src="pics/Drone.png" alt="Drone" class="frame-12060-drone" />
-  
-  <div class="vector vector-16"></div>
-  <div class="vector vector-17"></div>
-  <div class="vector vector-14"></div>
-  <div class="vector vector-13"></div>
-  <div class="vector vector-7"></div>
-  <div class="vector vector-11"></div>
-  
-  <div class="vector-text t1">X6 Motor Propeller</div>
-  <div class="vector-text t2">Water Pump - 8L</div>
-  <div class="vector-text t3">Centrifugal Spray Nozzle</div>
-  <div class="vector-text t4">Pesticide Spreader</div>
-  <div class="vector-text t5">Load 10Kg</div>
-  <div class="vector-text t6">Foldable Propellers</div>
-  
-  <div class="frame-12098">
-    <div class="module-item module-360-obstacle">
-      <img src="pics/360° Obstacle Radar.png" alt="360 Obstacle Radar">
-      <span>360° Obstacle Radar</span>
-    </div>
-    <div class="module-item module-rtk">
-      <img src="pics/RTK Module Sensor.png" alt="RTK Module Sensor">
-      <span>RTK Module Sensor</span>
-    </div>
-    <div class="module-item module-gps">
-      <img src="pics/GPS Module.png" alt="GPS Module">
-      <span>GPS Module</span>
-    </div>
-    <div class="module-item module-fpv">
-      <img src="pics/FVP Camera.png" alt="FPV Camera">
-      <span>FPV Camera</span>
-    </div>
-    <div class="module-item module-pixhawk">
-      <img src="pics/Pixhawk 6C Module.png" alt="Pixhawk 6C Module">
-      <span>Pixhawk 6C Module</span>
-    </div>
+<!-- <div id="header-placeholder"></div> -->
+ <div id="demoModal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <h2>Get Demo</h2>
+    <p class="modal-subtitle">Fill in your details to schedule a test drive.</p>
+    
+  <form id="demoForm" action="/demo/demo.php" method="post">
+  <div class="form-group" >
+    <input type="text" name="firstName" placeholder="First Name*" required style="border:1px solid #111;">
+    <input type="text" name="lastName" placeholder="Last Name*" required style="border:1px solid #111;">
   </div>
-</section>
 
-<!-- CORE CAPABILITIES SECTION -->
-<section class="frame-12025">
-  <div class="ellipse-2"></div>
-  <h2 class="frame-12025-title">Core Capabilities</h2>
-  <div class="capabilities-container">
-    <div class="capabilities-left">
-      <div class="capability-item">
-        <div class="capability-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-          </svg>
-        </div>
-        <div class="capability-content">
-          <h4>Durable Casing</h4>
-          <p>Dust and tamper-resistant carbon fiber frame.</p>
-        </div>
-      </div>
-      <div class="capability-item">
-        <div class="capability-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
-            <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
-            <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
-            <line x1="12" y1="20" x2="12.01" y2="20"></line>
-          </svg>
-        </div>
-        <div class="capability-content">
-          <h4>Multi-Mode Connectivity</h4>
-          <p>Wi-Fi, 4G, and Bluetooth connectivity options.</p>
-        </div>
-      </div>
-      <div class="capability-item">
-        <div class="capability-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-          </svg>
-        </div>
-        <div class="capability-content">
-          <h4>Encrypted Communication</h4>
-          <p>Ensures secure data transmission over all networks.</p>
-        </div>
-      </div>
+  <div class="form-group">
+    <div class="phone-wrapper" >
+      <select name="countryCode" class="country-code" required style="width: 170px;">
+         <option value="+93">🇦🇫 +93 Afghanistan</option>
+      <option value="+355">🇦🇱 +355 Albania</option>
+      <option value="+213">🇩🇿 +213 Algeria</option>
+      <option value="+376">🇦🇩 +376 Andorra</option>
+      <option value="+244">🇦🇴 +244 Angola</option>
+      <option value="+54">🇦🇷 +54 Argentina</option>
+      <option value="+61">🇦🇺 +61 Australia</option>
+      <option value="+43">🇦🇹 +43 Austria</option>
+      <option value="+880">🇧🇩 +880 Bangladesh</option>
+      <option value="+32">🇧🇪 +32 Belgium</option>
+      <option value="+55">🇧🇷 +55 Brazil</option>
+      <option value="+1">🇨🇦 +1 Canada</option>
+      <option value="+86">🇨🇳 +86 China</option>
+      <option value="+45">🇩🇰 +45 Denmark</option>
+      <option value="+20">🇪🇬 +20 Egypt</option>
+      <option value="+358">🇫🇮 +358 Finland</option>
+      <option value="+33">🇫🇷 +33 France</option>
+      <option value="+49">🇩🇪 +49 Germany</option>
+      <option value="+30">🇬🇷 +30 Greece</option>
+      <option value="+852">🇭🇰 +852 Hong Kong</option>
+      <option value="+354">🇮🇸 +354 Iceland</option>
+      <option value="+91" selected>🇮🇳 +91 India</option>
+      <option value="+62">🇮🇩 +62 Indonesia</option>
+      <option value="+353">🇮🇪 +353 Ireland</option>
+      <option value="+972">🇮🇱 +972 Israel</option>
+      <option value="+39">🇮🇹 +39 Italy</option>
+      <option value="+81">🇯🇵 +81 Japan</option>
+      <option value="+254">🇰🇪 +254 Kenya</option>
+      <option value="+965">🇰🇼 +965 Kuwait</option>
+      <option value="+60">🇲🇾 +60 Malaysia</option>
+      <option value="+52">🇲🇽 +52 Mexico</option>
+      <option value="+31">🇳🇱 +31 Netherlands</option>
+      <option value="+64">🇳🇿 +64 New Zealand</option>
+      <option value="+47">🇳🇴 +47 Norway</option>
+      <option value="+92">🇵🇰 +92 Pakistan</option>
+      <option value="+63">🇵🇭 +63 Philippines</option>
+      <option value="+48">🇵🇱 +48 Poland</option>
+      <option value="+351">🇵🇹 +351 Portugal</option>
+      <option value="+974">🇶🇦 +974 Qatar</option>
+      <option value="+7">🇷🇺 +7 Russia</option>
+      <option value="+966">🇸🇦 +966 Saudi Arabia</option>
+      <option value="+65">🇸🇬 +65 Singapore</option>
+      <option value="+27">🇿🇦 +27 South Africa</option>
+      <option value="+82">🇰🇷 +82 South Korea</option>
+      <option value="+34">🇪🇸 +34 Spain</option>
+      <option value="+94">🇱🇰 +94 Sri Lanka</option>
+      <option value="+46">🇸🇪 +46 Sweden</option>
+      <option value="+41">🇨🇭 +41 Switzerland</option>
+      <option value="+66">🇹🇭 +66 Thailand</option>
+      <option value="+90">🇹🇷 +90 Turkey</option>
+      <option value="+971">🇦🇪 +971 UAE</option>
+      <option value="+44">🇬🇧 +44 UK</option>
+      <option value="+1">🇺🇸 +1 USA</option>
+      <option value="+84">🇻🇳 +84 Vietnam</option>
+      <option value="+263">🇿🇼 +263 Zimbabwe</option>
+      </select>
+      <input type="tel" name="phone" placeholder="Phone Number*" required>
     </div>
-    <div class="capabilities-center">
-      <img src="pics/drone2.png" alt="Drone" class="capability-drone-image" />
-    </div>
-    <div class="capabilities-right">
-      <div class="capability-item">
-        <div class="capability-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
-          </svg>
-        </div>
-        <div class="capability-content">
-          <h4>Power Efficient</h4>
-          <p>Operates on dual battery system for extended usage.</p>
-        </div>
-      </div>
-      <div class="capability-item">
-        <div class="capability-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="4" y="4" width="16" height="16" rx="2"></rect>
-            <rect x="9" y="9" width="6" height="6"></rect>
-            <line x1="9" y1="1" x2="9" y2="4"></line>
-            <line x1="15" y1="1" x2="15" y2="4"></line>
-            <line x1="9" y1="20" x2="9" y2="23"></line>
-            <line x1="15" y1="20" x2="15" y2="23"></line>
-            <line x1="20" y1="9" x2="23" y2="9"></line>
-            <line x1="20" y1="15" x2="23" y2="15"></line>
-            <line x1="1" y1="9" x2="4" y2="9"></line>
-            <line x1="1" y1="15" x2="4" y2="15"></line>
-          </svg>
-        </div>
-        <div class="capability-content">
-          <h4>Custom Access Logic</h4>
-          <p>Intelligent control with modular configuration options.</p>
-        </div>
-      </div>
-      <div class="capability-item">
-        <div class="capability-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="2"></circle>
-            <path d="M16 8a6 6 0 0 1 0 8"></path>
-            <path d="M8 16a6 6 0 0 1 0-8"></path>
-            <path d="M20 5a11 11 0 0 1 0 14"></path>
-            <path d="M4 19a11 11 0 0 1 0-14"></path>
-          </svg>
-        </div>
-        <div class="capability-content">
-          <h4>High-Precision Sensor</h4>
-          <p>Supports wind-resistant flight and high-accuracy mapping.</p>
-        </div>
-      </div>
-    </div>
+   
+    <input type="email" name="email" placeholder="Email Address*" required style="border:1px solid #111;">
   </div>
-</section>
 
-<!-- FEATURE SPOTLIGHTS HEADER -->
-<section class="feature-spotlights-header">
-  <h2 class="feature-spotlights-title">Feature Spotlights</h2>
-  <p class="feature-spotlights-subtitle">
-    Experience reduced maintenance time, enhanced reliability, and precise navigation — all designed to simplify operations and maximize productivity.
-  </p>
-</section>
+  <div class="form-group">
+    <select name="country" required>
+      <option value="">Select Country*</option>
+   <option>Afghanistan</option>
+  <option>Albania</option>
+  <option>Algeria</option>
+  <option>Andorra</option>
+  <option>Angola</option>
+  <option>Antigua and Barbuda</option>
+  <option>Argentina</option>
+  <option>Armenia</option>
+  <option>Australia</option>
+  <option>Austria</option>
+  <option>Azerbaijan</option>
+  <option>Bahamas</option>
+  <option>Bahrain</option>
+  <option>Bangladesh</option>
+  <option>Barbados</option>
+  <option>Belarus</option>
+  <option>Belgium</option>
+  <option>Belize</option>
+  <option>Benin</option>
+  <option>Bhutan</option>
+  <option>Bolivia</option>
+  <option>Bosnia and Herzegovina</option>
+  <option>Botswana</option>
+  <option>Brazil</option>
+  <option>Brunei</option>
+  <option>Bulgaria</option>
+  <option>Burkina Faso</option>
+  <option>Burundi</option>
+  <option>Cabo Verde</option>
+  <option>Cambodia</option>
+  <option>Cameroon</option>
+  <option>Canada</option>
+  <option>Central African Republic</option>
+  <option>Chad</option>
+  <option>Chile</option>
+  <option>China</option>
+  <option>Colombia</option>
+  <option>Comoros</option>
+  <option>Congo (Brazzaville)</option>
+  <option>Congo (Kinshasa)</option>
+  <option>Costa Rica</option>
+  <option>Croatia</option>
+  <option>Cuba</option>
+  <option>Cyprus</option>
+  <option>Czech Republic</option>
+  <option>Denmark</option>
+  <option>Djibouti</option>
+  <option>Dominica</option>
+  <option>Dominican Republic</option>
+  <option>Ecuador</option>
+  <option>Egypt</option>
+  <option>El Salvador</option>
+  <option>Equatorial Guinea</option>
+  <option>Eritrea</option>
+  <option>Estonia</option>
+  <option>Eswatini</option>
+  <option>Ethiopia</option>
+  <option>Fiji</option>
+  <option>Finland</option>
+  <option>France</option>
+  <option>Gabon</option>
+  <option>Gambia</option>
+  <option>Georgia</option>
+  <option>Germany</option>
+  <option>Ghana</option>
+  <option>Greece</option>
+  <option>Grenada</option>
+  <option>Guatemala</option>
+  <option>Guinea</option>
+  <option>Guinea-Bissau</option>
+  <option>Guyana</option>
+  <option>Haiti</option>
+  <option>Honduras</option>
+  <option>Hungary</option>
+  <option>Iceland</option>
+  <option>India</option>
+  <option>Indonesia</option>
+  <option>Iran</option>
+  <option>Iraq</option>
+  <option>Ireland</option>
+  <option>Israel</option>
+  <option>Italy</option>
+  <option>Jamaica</option>
+  <option>Japan</option>
+  <option>Jordan</option>
+  <option>Kazakhstan</option>
+  <option>Kenya</option>
+  <option>Kiribati</option>
+  <option>Kuwait</option>
+  <option>Kyrgyzstan</option>
+  <option>Laos</option>
+  <option>Latvia</option>
+  <option>Lebanon</option>
+  <option>Lesotho</option>
+  <option>Liberia</option>
+  <option>Libya</option>
+  <option>Liechtenstein</option>
+  <option>Lithuania</option>
+  <option>Luxembourg</option>
+  <option>Madagascar</option>
+  <option>Malawi</option>
+  <option>Malaysia</option>
+  <option>Maldives</option>
+  <option>Mali</option>
+  <option>Malta</option>
+  <option>Marshall Islands</option>
+  <option>Mauritania</option>
+  <option>Mauritius</option>
+  <option>Mexico</option>
+  <option>Micronesia</option>
+  <option>Moldova</option>
+  <option>Monaco</option>
+  <option>Mongolia</option>
+  <option>Montenegro</option>
+  <option>Morocco</option>
+  <option>Mozambique</option>
+  <option>Myanmar (Burma)</option>
+  <option>Namibia</option>
+  <option>Nauru</option>
+  <option>Nepal</option>
+  <option>Netherlands</option>
+  <option>New Zealand</option>
+  <option>Nicaragua</option>
+  <option>Niger</option>
+  <option>Nigeria</option>
+  <option>North Korea</option>
+  <option>North Macedonia</option>
+  <option>Norway</option>
+  <option>Oman</option>
+  <option>Pakistan</option>
+  <option>Palau</option>
+  <option>Palestine</option>
+  <option>Panama</option>
+  <option>Papua New Guinea</option>
+  <option>Paraguay</option>
+  <option>Peru</option>
+  <option>Philippines</option>
+  <option>Poland</option>
+  <option>Portugal</option>
+  <option>Qatar</option>
+  <option>Romania</option>
+  <option>Russia</option>
+  <option>Rwanda</option>
+  <option>Saint Kitts and Nevis</option>
+  <option>Saint Lucia</option>
+  <option>Saint Vincent and the Grenadines</option>
+  <option>Samoa</option>
+  <option>San Marino</option>
+  <option>Sao Tome and Principe</option>
+  <option>Saudi Arabia</option>
+  <option>Senegal</option>
+  <option>Serbia</option>
+  <option>Seychelles</option>
+  <option>Sierra Leone</option>
+  <option>Singapore</option>
+  <option>Slovakia</option>
+  <option>Slovenia</option>
+  <option>Solomon Islands</option>
+  <option>Somalia</option>
+  <option>South Africa</option>
+  <option>South Korea</option>
+  <option>South Sudan</option>
+  <option>Spain</option>
+  <option>Sri Lanka</option>
+  <option>Sudan</option>
+  <option>Suriname</option>
+  <option>Sweden</option>
+  <option>Switzerland</option>
+  <option>Syria</option>
+  <option>Taiwan</option>
+  <option>Tajikistan</option>
+  <option>Tanzania</option>
+  <option>Thailand</option>
+  <option>Timor-Leste</option>
+  <option>Togo</option>
+  <option>Tonga</option>
+  <option>Trinidad and Tobago</option>
+  <option>Tunisia</option>
+  <option>Turkey</option>
+  <option>Turkmenistan</option>
+  <option>Tuvalu</option>
+  <option>Uganda</option>
+  <option>Ukraine</option>
+  <option>United Arab Emirates</option>
+  <option>United Kingdom</option>
+  <option>United States</option>
+  <option>Uruguay</option>
+  <option>Uzbekistan</option>
+  <option>Vanuatu</option>
+  <option>Vatican City</option>
+  <option>Venezuela</option>
+  <option>Vietnam</option>
+  <option>Yemen</option>
+  <option>Zambia</option>
+  <option>Zimbabwe</option>
+    </select>
+    <input type="text" name="city" placeholder="City*" required style="border:1px solid #111;">
+  </div>
 
-<!-- FEATURES CAROUSEL SECTION -->
-<section class="features-section">
-  <div class="features-carousel">
-    <button class="carousel-btn carousel-btn-left">←</button>
-    <div class="features-container">
-      <div class="feature-card feature-dark">
-        <img src="pics/image 64.png" class="feature-image" alt="Quick Release Landing Gear">
-        <div class="feature-content">
-          <h3>Quick-Release Landing Gear, Fast Maintenance</h3>
-          <p>
-            Quick-detach landing gear enables rapid maintenance and
-            efficient operation during demanding agricultural work.
+  <div class="form-group">
+    <select name="product" required>
+      <option value="">Select Product*</option>
+      <option value="drone10">Agri-Hawk Drone 10</option>
+      <option value="drone30">Agri-Hawk Drone 30</option>
+      <option value="drone80">Agri-Hawk Drone 80</option>
+      <option value="drone100">Agri-Hawk Drone 100</option>
+    </select>
+  </div>
+
+  <textarea name="message" placeholder="Additional Comments"></textarea>
+
+  <button type="submit" class="submit-btn">
+    Request Demo <span class="arrow">→</span>
+  </button>
+
+  <p class="form-note">By submitting this form, you agree to our <a href="/privacy">Privacy Policy</a></p>
+</form>
+
+  </div>
+</div>
+
+<!-- phone menu section -->
+ <div id="mobileMenu" class="mobile-menu">
+  <a href="javascript:void(0)" onclick="navigateTo('/products/p1/p1.html')">Product 1</a>
+  <a href="javascript:void(0)" onclick="navigateTo('/products/p2')">Product 2</a>
+  <a href="javascript:void(0)" onclick="navigateTo('/products/p3')">Product 3</a>
+  <a href="javascript:void(0)" onclick="navigateTo('/products/p4')">Product 4</a>
+
+<a href="javascript:void(0)" onclick="navigateTo('/aboutus')">About-us</a>
+ 
+  <a href="javascript:void(0)" onclick="navigateTo('/distributor')">Become a Distributor</a>
+      <a href="javascript:void(0)" onclick="navigateTo('/career')">Career</a>
+            <a href="javascript:void(0)" onclick="navigateTo('/career')">Career</a>
+
+</div>
+  <!-- HEADER WILL BE ADDED BY YOU SEPARATE -->
+
+  <!-- HERO SECTION -->
+  <section id="heroSection" class="hero-section">
+    <div class="hero-slider">
+      <div class="slide active" style="background-image:url('./pics/banner.webp')"></div>
+      <div class="slide" style="background-image:url('./pics/banner3.webp')"></div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Main H1 Heading -->
+    <h1 style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; text-align: center; z-index: 5; font-size: 48px; font-weight: 700; margin: 0; max-width: 90%; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Agri-Hawk Drone Solutions for Agricultural Precision</h1>
+
+    <!-- Buttons -->
+    <button class="nav-btn prev">
+      <!-- lucide chevron-left SVG -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" stroke="white" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+    </button>
+    <button class="nav-btn next">
+      <!-- lucide chevron-right SVG -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" stroke="white" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+    </button>
+  </section>
+
+  <!-- OTHER PAGES SECTIONS YOU WILL ADD LATER BELOW -->
+  <section id="business-growth" class="business-growth-section">
+
+  <div class="business-growth-container">
+
+    <!-- LEFT SIDE -->
+    <div>
+      <h2 class="bg-heading">
+        How Can Your Business Grow With <span>Hawk Aero?</span>
+      </h2>
+
+      <p class="bg-sub">
+        At Hawk Aero, we design smart drone systems built to empower Indian
+        businesses — increasing efficiency, reducing costs, and scaling
+        possibilities.
+      </p>
+
+      <div class="bg-accordion">
+
+        <div class="bg-card">
+          <button class="bg-card-btn" onclick="toggleBG(1)">
+            <div style="display:flex;align-items:center;">
+              <div class="bg-badge">1</div>
+              <span class="bg-card-title">More Payload. More Range. More Earnings.</span>
+            </div>
+            <span class="bg-icon" id="icon1">▼</span>
+          </button>
+          <p class="bg-desc" id="desc1">
+            Designed for India’s toughest logistics needs — carry more load per trip with unmatched efficiency and reliability.
           </p>
         </div>
-      </div>
-      <div class="feature-card feature-light">
-        <img src="pics/image 55.png" class="feature-image" alt="Dual Water Pump">
-        <div class="feature-content">
-          <h3>Dual Water Pumps Boost Flow and Efficiency</h3>
-          <p>
-            Dual water pumps provide higher flow for efficient spraying
-            and transport operations, enhancing agricultural productivity.
+
+        <div class="bg-card">
+          <button class="bg-card-btn" onclick="toggleBG(2)">
+            <div style="display:flex;align-items:center;">
+              <div class="bg-badge">2</div>
+              <span class="bg-card-title">Faster Charging. Smarter Tech. Lower Costs.</span>
+            </div>
+            <span class="bg-icon" id="icon2">▼</span>
+          </button>
+          <p class="bg-desc" id="desc2" style="display:none;">
+            Get back on the road quicker with fast-charging technology, intelligent telematics, and reduced total cost of ownership.
           </p>
+        </div>
+
+        <div class="bg-card">
+          <button class="bg-card-btn" onclick="toggleBG(3)">
+            <div style="display:flex;align-items:center;">
+              <div class="bg-badge">3</div>
+              <span class="bg-card-title">Reliable Service. All-India Support.</span>
+            </div>
+            <span class="bg-icon" id="icon3">▼</span>
+          </button>
+          <p class="bg-desc" id="desc3" style="display:none;">
+            Backed by a nationwide service network ensuring uptime, reliability, and support wherever your business goes.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="bg-right">
+      <div class="bg-drone-box">
+        <img src="./pics/drone4.webp" alt="Hawk Aero Drone"/>
+
+        <div class="bg-floating-card">
+          <div class="bg-built">
+            <span></span> Built for India
+          </div>
+          <h3>100%</h3>
+          <p>Designed for Indian field & weather conditions</p>
         </div>
       </div>
     </div>
-    <button class="carousel-btn carousel-btn-right">→</button>
+
+  </div>
+
+</section>
+
+<section id="product-section" class="product-section">
+
+  <div class="ps-header">
+    <h2>Choose Your <span>Drone</span></h2>
+    <p>
+      Explore the range of smart systems optimized for field size, ensuring
+      maximum efficiency with tailored capacity and flight time.
+    </p>
+  </div>
+
+  <div class="ps-slider-wrapper">
+
+    <button class="ps-nav prev" onclick="psPrevSlide()">
+      <!-- lucide left -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
+    </button>
+
+    <div class="ps-slider">
+      <div class="ps-track">
+
+        <div class="ps-card">
+          <div class="ps-img-box">
+            <img src="./pics/drone1.avif" />
+          </div>
+          <div class="ps-content">
+            <h3>Agri-Hawk Drone 30</h3>
+            <span class="ps-price">₹-----</span>
+            <div class="ps-specs">
+              <div><strong>10–15 km</strong><p>Flight Range</p></div>
+              <div><strong>30 kg</strong><p>Payload</p></div>
+            </div>
+            <a href="/products/p1" class="ps-btn">Learn More</a>
+          </div>
+        </div>
+
+        <div class="ps-card">
+          <div class="ps-img-box">
+            <img src="./pics/drone2.webp" />
+          </div>
+          <div class="ps-content">
+            <h3>Agri-Hawk Drone 50</h3>
+            <span class="ps-price">₹-----</span>
+            <div class="ps-specs">
+              <div><strong>20 km</strong><p>Flight Range</p></div>
+              <div><strong>50 kg</strong><p>Payload</p></div>
+            </div>
+            <a href="/products/p2" class="ps-btn">Learn More</a>
+          </div>
+        </div>
+
+        <div class="ps-card">
+          <div class="ps-img-box">
+            <img src="./pics/drone3.webp" />
+          </div>
+          <div class="ps-content">
+            <h3>Agri-Hawk Drone 100</h3>
+            <span class="ps-price">₹-----</span>
+            <div class="ps-specs">
+              <div><strong>25 km</strong><p>Flight Range</p></div>
+              <div><strong>100 kg</strong><p>Payload</p></div>
+            </div>
+            <a href="/products/p3" class="ps-btn">Learn More</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <button class="ps-nav next" onclick="psNextSlide()">
+      <!-- lucide right -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+    </button>
+  </div>
+
+  <div class="ps-dots">
+    <span onclick="psGo(0)"></span>
+    <span onclick="psGo(1)"></span>
+    <span onclick="psGo(2)"></span>
   </div>
 </section>
 
-<!-- DRONE COMPONENTS SECTION -->
-<section class="drone-components">
-  <h2 class="drone-components-title">Drone Components & Assembly</h2>
-  <p class="drone-components-subtitle">
-    Every Agri-Hawk Drone kit includes precision-engineered components for efficient
-    assembly — including the main carbon fiber frame, motor arms, propellers, pump,
-    control modules, cables, and the remote control unit. Designed for easy maintenance
-    and modular upgrades, ensuring long-term reliability in demanding agricultural operations.
-  </p>
-  <img
-    src="pics/Drone Components & Assembly.png"
-    alt="Drone Components"
-    class="drone-components-image"
-  />
-</section>
+ <!-- TCO Calculator Section -->
 
-<!-- DIMENSIONS SECTION -->
-<section class="frame-12056">
-  <h2 class="frame-12056-title">Dimensions & Physical Specifications</h2>
-  <div class="dimensions-content">
-    <div class="dimensions-images">
-      <img src="pics/ed645b4e8effde9213162d149e555344b0432c99.png" alt="Drone Front View" class="drone-dimension-front" />
-    </div>
-  </div>
-</section>
 
-<!-- TECHNICAL SPECIFICATIONS SECTION -->
-<section class="frame-12061">
-  <h2 class="frame-12061-title">Detailed Technical Specifications</h2>
-  
-  <div class="tabs-container">
-    <button class="tab-btn tab-active" data-tab="tech-specs">Technical Specifications</button>
-    <button class="tab-btn" data-tab="centrifugal">Centrifugal Spray Nozzle</button>
-    <button class="tab-btn" data-tab="spreader">Seed and Pesticides Spreader</button>
-    <button class="tab-btn" data-tab="pump">8L Brushless Water Pump</button>
-  </div>
+<div id="tco-placeholder"></div>
+</section> <!-- end of Choose Your Drone section -->
 
-  <div class="specs-grid">
-    <div class="spec-card" id="tech-specs">
-      <h3>Technical Specifications</h3>
-      <div class="spec-row">
-        <span class="spec-label">Wheelbase</span>
-        <span class="spec-value">1524mm</span>
-      </div>
-      <div class="spec-row">
-        <span class="spec-label">Tank Capacity</span>
-        <span class="spec-value">10L</span>
-      </div>
-      <div class="spec-row">
-        <span class="spec-label">Frame Net Weight</span>
-        <span class="spec-value">11.18KG</span>
-      </div>
-      <div class="spec-row">
-        <span class="spec-label">Tank Net weight</span>
-        <span class="spec-value">1.939KG</span>
-      </div>
-      <div class="spec-row">
-        <span class="spec-label">Expanded Size</span>
-        <span class="spec-value">2053.13 × 1888.66 × 624.56mm</span>
-      </div>
-      <div class="spec-row">
-        <span class="spec-label">Folded Size</span>
-        <span class="spec-value">798.61 × 508.23 × 637.51mm</span>
-      </div>
-      <div class="spec-row">
-        <span class="spec-label">Colour</span>
-        <span class="spec-value">Black/Grey</span>
-      </div>
-      <div class="spec-row">
-        <span class="spec-label">Recommended Motor</span>
-        <span class="spec-value">X6 Motor – 24inch</span>
-      </div>
-      <div class="spec-row">
-        <span class="spec-label">Recommended Battery</span>
-        <span class="spec-value">25000mAh 14S</span>
-      </div>
-      <div class="spec-row">
-        <span class="spec-label">Arm Diameter</span>
-        <span class="spec-value">30mm</span>
-      </div>
+<!-- =================== TCO Calculator Section =================== -->
+<div id="tco-placeholder"></div>
+
+<script>
+  // Dynamically load the TCO calculator HTML file (keeps all its internal CSS/JS intact)
+  fetch('./tco/tco.html')
+    .then(response => {
+      if (!response.ok) throw new Error('Failed to load TCO section');
+      return response.text();
+    })
+    .then(html => {
+      document.getElementById('tco-placeholder').innerHTML = html;
+
+      // Execute any <script> tags inside tco.html dynamically
+      const scripts = document.getElementById('tco-placeholder').querySelectorAll('script');
+      scripts.forEach(script => {
+        const newScript = document.createElement('script');
+        if (script.src) {
+          newScript.src = script.src;
+        } else {
+          newScript.textContent = script.textContent;
+        }
+        document.body.appendChild(newScript);
+      });
+    })
+    .catch(err => console.error('TCO load error:', err));
+</script>
+<!-- =================== End TCO Calculator Section =================== -->
+
+
+
+
+
+
+  <!-- Apps Section -->
+<section id="appsSection" class="apps-section">
+  <div class="apps-bg-overlay"></div>
+
+  <div class="apps-container">
+    <div class="apps-header">
+      <h2>Explore the <span>Hawk AeroSystems</span> Platform</h2>
+      <p>
+        Hawk AeroSystems provides a comprehensive, multi-role platform that powers complex
+        drone operations end-to-end. We offer tailored experiences for every stakeholder,
+        ensuring maximum efficiency, compliance, and control.
+      </p>
     </div>
 
-    <div class="spec-card" id="centrifugal">
-      <h3>Centrifugal Spray Nozzle</h3>
-      <div class="spec-row">
-        <span class="spec-label">Shell material</span>
-        <span class="spec-value">Aluminium Design</span>
+    <div class="apps-layout">
+      <!-- iPhone Mockup -->
+      <div class="apps-phone">
+        <div class="phone-screen" id="appPhoneScreen"></div>
       </div>
-      <div class="spec-row">
-        <span class="spec-label">Power Required</span>
-        <span class="spec-value">60W</span>
-      </div>
-      <div class="spec-row">
-        <span class="spec-label">Mist particle diameter</span>
-        <span class="spec-value">75 – 200 microns</span>
-      </div>
-      <div class="spec-row">
-        <span class="spec-label">Atomizing spray width</span>
-        <span class="spec-value">1.5 – 2.0 meters</span>
-      </div>
-      <div class="spec-row">
-        <span class="spec-label">Voltage</span>
-        <span class="spec-value">22.2V</span>
-      </div>
-      <div class="spec-row">
-        <span class="spec-label">Speed</span>
-        <span class="spec-value">20,000rpm</span>
-      </div>
-      <div class="spec-row">
-        <span class="spec-label">Outgoing cable length</span>
-        <span class="spec-value">1 m</span>
-      </div>
-      <div class="spec-row">
-        <span class="spec-label">Flow rate per nozzle</span>
-        <span class="spec-value">0.5 – 4L/min</span>
-      </div>
-      <div class="spec-row">
-        <span class="spec-label">Required spray pressure</span>
-        <span class="spec-value">0.3 – 0.7 bar</span>
-      </div>
-    </div>
 
-    <div class="spec-card" id="spreader">
-      <h3>Seed and Pesticides Spreader</h3>
-      <div class="spec-row">
-        <span class="spec-label">Dimensions</span>
-        <span class="spec-value">300 × 250 × 145 mm</span>
-      </div>
-      <div class="spec-row">
-        <span class="spec-label">Net Weight</span>
-        <span class="spec-value">1.05 kg</span>
-      </div>
-      <div class="spec-row">
-        <span class="spec-label">Voltage Range</span>
-        <span class="spec-value">DC 24V–80V</span>
-      </div>
-      <div class="spec-row">
-        <span class="spec-label">Maximum Power</span>
-        <span class="spec-value">180W</span>
-      </div>
-      <div class="spec-row">
-        <span class="spec-label">Protection Level</span>
-        <span class="spec-value">IP67</span>
-      </div>
-      <div class="spec-row">
-        <span class="spec-label">Supported Particle Diameter</span>
-        <span class="spec-value">0.5–6.0 mm</span>
-      </div>
-      <div class="spec-row">
-        <span class="spec-label">Maximum Discharge Area</span>
-        <span class="spec-value">38.04 cm²</span>
-      </div>
-      <div class="spec-row">
-        <span class="spec-label">Valve Angle</span>
-        <span class="spec-value">0–45°</span>
-      </div>
-      <div class="spec-row">
-        <span class="spec-label">Maximum Speed</span>
-        <span class="spec-value">1100 rpm</span>
-      </div>
-      <div class="spec-row">
-        <span class="spec-label">Spreading Width</span>
-        <span class="spec-value">12 meters</span>
-      </div>
-    </div>
-
-    <div class="spec-card" id="pump">
-      <h3>8L Brushless Water Pump</h3>
-      <div class="spec-row">
-        <span class="spec-label">Voltage</span>
-        <span class="spec-value">12–14S (DC44–60.9V)</span>
-      </div>
-      <div class="spec-row">
-        <span class="spec-label">Working current</span>
-        <span class="spec-value">&lt;2A</span>
-      </div>
-      <div class="spec-row">
-        <span class="spec-label">Weight</span>
-        <span class="spec-value">685g</span>
-      </div>
-      <div class="spec-row">
-        <span class="spec-label">Water inlet diameter</span>
-        <span class="spec-value">10.5mm</span>
-      </div>
-      <div class="spec-row">
-        <span class="spec-label">Water outlet diameter</span>
-        <span class="spec-value">6.5mm</span>
-      </div>
-      <div class="spec-row">
-        <span class="spec-label">Amount power</span>
-        <span class="spec-value">60W</span>
-      </div>
-      <div class="spec-row">
-        <span class="spec-label">Opening flow</span>
-        <span class="spec-value">8L/min</span>
-      </div>
-      <div class="spec-row">
-        <span class="spec-label">Size</span>
-        <span class="spec-value">140×95×70mm</span>
-      </div>
-      <div class="spec-row">
-        <span class="spec-label">Working pressure</span>
-        <span class="spec-value">0.5Mpa</span>
-      </div>
-      <div class="spec-row">
-        <span class="spec-label">Protection level</span>
-        <span class="spec-value">IP67</span>
-      </div>
-      <div class="spec-row">
-        <span class="spec-label">Fixed PWM throttle stroke</span>
-        <span class="spec-value">110–1940US</span>
-      </div>
+      <!-- App List -->
+      <div class="apps-list" id="appsListContainer"></div>
     </div>
   </div>
 </section>
 
-<script src="script.js"></script>
+
+<section id="technologySection" class="tech-section">
+  <div class="tech-container">
+    <h2 class="tech-title">Features</h2>
+
+    <div class="tech-content">
+      <!-- LEFT: Image + floating description -->
+      <div class="tech-visual">
+        <div class="tech-image-wrap">
+          <img id="techImage" src="/pics/drone1.avif" alt="Precision Spraying" class="tech-image" loading="lazy" decoding="async" />
+        </div>
+        <div id="techDesc" class="tech-desc">
+          Delivers pesticides and fertilizers exactly where needed, reducing chemical usage by 30–40% while ensuring healthier crops and sustainable farming practices.
+        </div>
+      </div>
+
+      <!-- RIGHT: Tabs -->
+      <div class="tech-tabs" id="techTabs">
+        <!-- Buttons generated by JS; fallback HTML (optional) -->
+        <button class="tech-tab active" data-id="spraying">
+          <span class="tech-progress">
+            <svg class="ring" viewBox="0 0 40 40">
+              <circle class="bg" cx="20" cy="20" r="18"></circle>
+              <circle class="fg" cx="20" cy="20" r="18" stroke-dasharray="113" stroke-dashoffset="0"></circle>
+            </svg>
+            <span class="icon"><i data-lucide="droplet"></i></span>
+          </span>
+          <span class="label">Precision Spraying</span>
+        </button>
+
+        <button class="tech-tab" data-id="battery">
+          <span class="tech-progress">
+            <svg class="ring" viewBox="0 0 40 40">
+              <circle class="bg" cx="20" cy="20" r="18"></circle>
+              <circle class="fg" cx="20" cy="20" r="18" stroke-dasharray="113" stroke-dashoffset="113"></circle>
+            </svg>
+            <span class="icon"><i data-lucide="battery"></i></span>
+          </span>
+          <span class="label">Extended Battery Life</span>
+        </button>
+
+        <button class="tech-tab" data-id="mapping">
+          <span class="tech-progress">
+            <svg class="ring" viewBox="0 0 40 40">
+              <circle class="bg" cx="20" cy="20" r="18"></circle>
+              <circle class="fg" cx="20" cy="20" r="18" stroke-dasharray="113" stroke-dashoffset="113"></circle>
+            </svg>
+            <span class="icon"><i data-lucide="map"></i></span>
+          </span>
+          <span class="label">AI-Powered GPS Mapping</span>
+        </button>
+
+        <button class="tech-tab" data-id="modular">
+          <span class="tech-progress">
+            <svg class="ring" viewBox="0 0 40 40">
+              <circle class="bg" cx="20" cy="20" r="18"></circle>
+              <circle class="fg" cx="20" cy="20" r="18" stroke-dasharray="113" stroke-dashoffset="113"></circle>
+            </svg>
+            <span class="icon"><i data-lucide="layers"></i></span>
+          </span>
+          <span class="label">Modular Design</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <script src="/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="/tco.js"></script>
+  <link rel="stylesheet" href="tco.css">
+  <script src="/apps.js"></script>
+  <script src="/technology.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    if (window.lucide) window.lucide.createIcons();
+  });
+</script>
+
+  <!-- Auth Modal loader -->
+  <div id="authModalPlaceholder"></div>
+  <script>
+    // Lazy-load shared auth modal so header login buttons work everywhere
+    let authModalLoaded = false;
+    let authModalLoading = false;
+
+    window.showAuthModal = function () {
+      const modal = document.getElementById("authModal");
+      if (modal && authModalLoaded) {
+        modal.classList.add("show");
+        const scrollbarWidth =
+          window.innerWidth - document.documentElement.clientWidth;
+        document.body.style.overflow = "hidden";
+        document.body.style.paddingRight = scrollbarWidth + "px";
+      } else if (authModalLoading) {
+        setTimeout(() => window.showAuthModal(), 500);
+      } else if (!authModalLoaded) {
+        loadAuthModal();
+        setTimeout(() => window.showAuthModal(), 1000);
+      }
+    };
+
+    function loadAuthModal() {
+      if (authModalLoading || authModalLoaded) return;
+      authModalLoading = true;
+
+      fetch("/components/auth-modal.html")
+        .then((response) => response.text())
+        .then((html) => {
+          const placeholder = document.getElementById("authModalPlaceholder");
+          placeholder.innerHTML = html;
+
+          const scripts = placeholder.querySelectorAll("script");
+          scripts.forEach((oldScript) => {
+            const newScript = document.createElement("script");
+            if (oldScript.src) {
+              newScript.src = oldScript.src;
+            } else {
+              newScript.textContent = oldScript.textContent;
+            }
+            document.body.appendChild(newScript);
+          });
+
+          authModalLoaded = true;
+          authModalLoading = false;
+        })
+        .catch((err) => {
+          console.error("Failed to load auth modal:", err);
+          authModalLoading = false;
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", loadAuthModal);
+  </script>
+ <!-- ================ Functional JS ================ -->
+
+<script>
+// -------------- BASIC IDs -------------------
+if (!document.cookie.includes("visitor_id")) {
+    document.cookie = "visitor_id=" + Math.random().toString(36).substring(2) + "; path=/; max-age=" + 31536000;
+}
+if (!sessionStorage.getItem("session_id")) {
+    sessionStorage.setItem("session_id", "sess_" + Math.random().toString(36).substring(2));
+}
+
+let visitor_id = document.cookie.split("visitor_id=")[1].split(";")[0];
+let session_id = sessionStorage.getItem("session_id");
+
+// --------- DEVICE TYPE ----------
+function getDeviceType() {
+    let ua = navigator.userAgent.toLowerCase();
+    if (/mobile|android|iphone/.test(ua)) return "Mobile";
+    if (/tablet/.test(ua)) return "Tablet";
+    return "Desktop";
+}
+
+// --------- BROWSER + OS ----------
+function getBrowserInfo() {
+    let ua = navigator.userAgent;
+    let temp = ua.match(/(firefox|msie|chrome|safari|trident|edg)\/?\s*(\d+)/i) || [];
+    return {
+        browser: temp[1] || "Unknown",
+        os: navigator.platform || "Unknown"
+    };
+}
+
+// --------- NETWORK SPEED ----------
+async function estimateSpeed() {
+    try {
+        const start = performance.now();
+        await fetch("https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png");
+        const end = performance.now();
+        const speed = (272000 / (end - start)).toFixed(2); // rough kb/s
+        return speed;
+    } catch (e) {
+        return "Unknown";
+    }
+}
+
+// --------- BATTERY ----------
+async function getBatteryLevel() {
+    try {
+        const battery = await navigator.getBattery();
+        return Math.round(battery.level * 100) + "%";
+    } catch (e) {
+        return "Unknown";
+    }
+}
+
+// --------- LOCATION + ISP ----------
+async function geoInfo() {
+    let r = await fetch("https://ipapi.co/json/");
+    return await r.json();
+}
+
+// -----------------------------------------
+async function sendData() {
+    let netSpeed = await estimateSpeed();
+    let battery = await getBatteryLevel();
+    let geo = await geoInfo();
+    let browserInfo = getBrowserInfo();
+
+    const data = {
+        visitor_id,
+        session_id,
+        page_url: window.location.href,
+        referrer: document.referrer,
+        user_agent: navigator.userAgent,
+        language: navigator.language,
+        screen: `${window.screen.width}x${window.screen.height}`,
+        visits: localStorage.getItem("visitCount") || 1,
+        // Extra fields:
+        country: geo.country_name,
+        city: geo.city,
+        isp: geo.org,
+        latitude: geo.latitude,
+        longitude: geo.longitude,
+        timezone: geo.timezone,
+        device_type: getDeviceType(),
+        os: browserInfo.os,
+        browser: browserInfo.browser,
+        battery: battery,
+        network_speed: netSpeed
+    };
+
+    fetch("https://www.hawkaerosystem.co.uk/track/store_cookies.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+    });
+}
+
+sendData();
+</script>
+
+
+
 </body>
 </html>
